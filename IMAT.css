@@ -1,0 +1,524 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0px solid rgb(34, 198, 176);
+    color: beige;
+}
+
+@keyframes spin{
+    0%{
+
+    }
+    50%{
+        scale: 2;
+        transform: rotate(0);
+    }
+    100%{
+        
+        border-radius: 50%;
+        scale: 1.2;
+       }
+}
+
+
+@keyframes triangleone{
+    0%   {left: 0px; top: 0px;}
+    25%  {left: 28px; top: 12.5px;}
+    50%  {left: 56px; top: 25px;}
+    75%  {left: 84px; top: 37.5px;}
+    100% {transform: rotate(413deg); left: 112px; top: 48px; border-radius: 50%;}
+}
+@keyframes triangletwo{
+    0% {bottom: 0px;}
+    100%{ transform: rotate(360deg); border-radius: 50%; bottom: 40px;}
+}
+@keyframes trianglethree{
+    0%   {right: 0px; top: 0px;}
+    25%  {right: 28px; top: 12.5px;}
+    50%  {right: 56px; top: 25px;}
+    75%  {right: 84px; top: 37.5px;}
+    100% {transform: rotate(-413deg); right: 112px; top: 48px; border-radius: 50%;}
+}
+
+@keyframes shadow{
+    0% {box-shadow: 0 3px 3px red;}
+    33% {box-shadow: -3px 0 3px blue;}
+    66% {box-shadow: 0px -3px 3px darkcyan;}
+    100% {box-shadow: 3px 0 3px yellowgreen;}
+}
+
+@keyframes logo{
+    0%{}
+    33%{ transform: rotate(0deg); scale: 1.3;}
+    66%{transform: rotate(360deg); scale: 1;}
+    100%{transform: rotate(360deg); scale: 1;}
+}
+
+@keyframes IMAT{
+    0%{transform: translateY(-400px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes Preparatory{
+    0%{transform: translateX(-400px);}
+    100%{transform: translateX(0px);}
+}
+
+@keyframes School{
+    0%{transform: translateY(400px);}
+    100%{transform: translateY(0px);}
+}
+
+/******heading******/
+.heading{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url(Background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    padding-bottom: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+nav h1 a{
+    text-decoration: none;
+}
+
+.nav-list{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+}
+
+.nav-list ul li a:hover{
+    text-shadow: 0 0 3PX #ab18ef, 0 0 5px #0000FF;
+    transition: 0.3s;
+    
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 800px){
+    .nav-list ul li{
+        display: block;
+    }
+    .nav-list{
+        position: fixed;
+        background: #030831fa;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-list ul{
+        padding: 30px;
+    }
+}
+
+
+
+.main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    padding: 2%;
+    text-align: justify;
+    top: 50px;
+    position: relative;
+}
+.main {
+    display: flex;
+}
+.logo{
+    width: 70%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 100px;
+    height: 150px;
+
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 4%;
+    margin: 4%;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-text div{
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(21, 159, 197, 0.868);
+    
+    
+
+}
+
+#IMAT{
+    animation-name: IMAT;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+#Preparatory{
+    animation-name: Preparatory;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+#School{
+    animation-name: School;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+}
+
+/*** #triangleone {
+	width: 0px;
+	height: 0px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #2c33b6c5;
+    position: relative;
+
+    animation-name: triangleone;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+#triangletwo {
+	width: 0px;
+	height: 0px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #510404d8;
+    position: relative;
+    align-self:flex-end;
+    left: 1px;
+
+    animation-name: triangletwo;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#trianglethree {
+	width: 0px;
+	height: 0px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #ffffffc0;
+    position: relative;
+    
+    animation-name: trianglethree;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}***/
+.main-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    width: 70%;
+    position: relative;
+    top: 50px;
+}
+
+.main-body a{
+    text-decoration: none;
+    padding: 1%;
+    margin: 1%;
+}
+
+.main-header p{
+    font-size: 14px;
+    padding: 5%;
+    margin-top: 4%;
+
+    animation-name: shadow;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.catalog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 180px;
+    border-radius: 15px 15px;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgb(21, 199, 205);
+   /*** background: rgba(0, 0, 0, 0.384);***/
+}
+p{
+    font-family: "Roboto Slab", serif;
+}
+
+#one{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.708),rgba(4, 9, 30, 0.781));
+}
+
+#one h3{
+    position: relative;
+    top: 30px;
+}
+
+#two{
+    background: linear-gradient(rgba(4, 9, 30, 0.708),rgba(4, 9, 30, 0.781));
+}
+#two h3{
+    position: relative;
+    top: 30px;
+}
+
+#three{
+    background: linear-gradient(rgba(4, 9, 30, 0.708),rgba(4, 9, 30, 0.781));
+}
+
+#three h3{
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+}
+#four{
+    background: linear-gradient(rgba(4, 9, 30, 0.708),rgba(4, 9, 30, 0.781));
+}
+
+#five{
+    background: linear-gradient(rgba(4, 9, 30, 0.708),rgba(4, 9, 30, 0.781));
+}
+
+#six{
+    background: linear-gradient(rgba(4, 9, 30, 0.708),rgba(4, 9, 30, 0.781));
+}
+.catalog h3{
+    padding: 5px;
+    margin: 15px;
+    font-size: 20px;
+}
+.catalog p{
+    margin: 15px;
+    padding: 5px;
+    font-size: 11px;
+}
+
+.catalog:hover{
+    box-shadow: 3px 3px 3px rgba(137, 7, 173, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(Unimi.webp);
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s;
+}
+
+.catalog:focus{
+    cursor: pointer;
+}
+
+#one:hover{
+    box-shadow: 3px 3px 3px rgba(173, 7, 26, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(Stetho\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#two:hover{
+    box-shadow: 3px 3px 3px rgba(173, 7, 26, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(Unimi.webp);
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#three:hover{
+    box-shadow: 3px 3px 3px rgba(173, 7, 26, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(Stetho.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#four:hover{
+    box-shadow: 3px 3px 3px rgba(173, 7, 26, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(turin.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#five:hover{
+    box-shadow: 3px 3px 3px rgba(173, 7, 26, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(edu.png);
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#six:hover{
+    box-shadow: 3px 3px 3px rgba(173, 7, 26, 0.575);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.82),rgba(4, 9, 30, 0.961)),url(milan.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.footer {
+    
+    margin: 0%;
+    margin-top: 6%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit{
+    font-family:cursive;
+    font-size: 10px;
+    text-shadow: 0px 0px 3px cyan;
+    margin: 0%;
+}
+.Contact{
+    display: flex;
+    justify-content: space-between;
+    width: 7%;
+    margin-top: 1%;
+
+}
+
+@media screen and (max-width: 1200px){
+    .main{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content:flex-start;
+    }
+    .main-header{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+        top: 10%
+    }
+    .logo{
+        margin: 3%;
+    }
+    #IMAT{
+        text-align: right;
+    }
+    #Preparatory{
+        text-align: right;
+    }
+    #School{
+        text-align: right;
+    }
+    .main-body{
+        width: 80%;
+        border: 0px solid red;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .main-header{
+      flex-direction: column;
+    }
+
+    .main-body{
+        width: 100%;
+    }
+
+}

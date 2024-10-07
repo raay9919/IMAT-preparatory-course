@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-
+        scale=1.0">
+        <title>Registration</title>
+        <link rel="stylesheet" href="Registration.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/7823c06798.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="heading">
+            <nav>
+                <h1>
+                    <a href="../index.html">What is IMAT?</a>
+                </h1>
+                <div class="nav-list" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../IMAT/IMAT-Myan.html">IMAT</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                        <li>
+                            <a href="">Registration</a>
+                        </li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="main">
+                <div class="main-header">
+                    <div class="logo">
+                        <img src="logo (2).png">
+                        <div class="logo-text">
+                            <div id="IMAT">IMAT</div>
+                            <div id="Preparatory">Preparatory</div>
+                            <div id="School">School </div>
+                        </div>
+                    </div>
+                    <p>
+                    <span id="Head">Registration</span>
+                    </br></br>We will confirm your Registration in a few days after submitting the form
+                    </p>
+                </div>
+            <div class="main-body">
+                <form action="process-form.php" method="post">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name">
+        
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="MinMayLin@gmail.com">
+        
+                    <label for="phone">Contact Number*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+39">
+        
+                    <label for="message"></label>
+                    <textarea id="message" name="message" placeholder="If you are attending foundation year, which University are you currently enrolled at?"></textarea>
+        
+                    <label for="priority">Have you studied the topics for the IMAT before?*</label>
+                    <select id="priority" name="priority">
+                        <option value="No">No</option>
+                        <option value="Few">Few</option>
+                        <option value="A lot" selected>A lot</option>
+                    </select>
+                    <br>
+                    <fieldset>
+                        <legend>Are you okay with the questions asked by the tutor regarding the topic during the class?*</legend>
+                    
+                        <label>
+                            <input type="radio" name="type" value="Yes" checked>
+                            Yes
+                        </label>
+        
+                        <br>
+        
+                        <label>
+                            <input type="radio" name="type" value="No"> 
+                            No
+                        </label>
+                    </fieldset>
+                    <br>
+                    <label>Which subjects do you think you feel confident?*</label>
+                    <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="subject" value="Biology"> Biology </label>
+                    <label> <input type="checkbox" name="subject" value="Chemistry"> Chemistry </label>
+                    <label> <input type="checkbox" name="subject" value="Physics"> Physics</label>
+                    <label> <input type="checkbox" name="subject" value="Mathematics and Critical Thinking"> Mathematics and Critical Thinking
+                    </label>
+                    </div>
+        
+                    <br>
+                    <br>
+        
+                    <button class="submit">Register</button>
+                </form>
+            </div>
+            <section class="footer">
+                    <div class="credit">
+                        <h3>Designed by Thiha Kyaw Swar &copy;</h3>
+                    </div>
+                    <div class="Contact">
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+            </section>
+        </section>
+                <!-----JavaScript for Toggle Menu------>
+                <script>
+
+                    var navLinks = document.getElementById("navLinks");
+                    function showMenu() {
+                        navLinks.style.right = "0";
+                    }
+                    function hideMenu() {
+                        navLinks.style.right = "-200px";
+                    }
+                </script>
+    </body>
+</html>
