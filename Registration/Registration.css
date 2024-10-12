@@ -406,7 +406,7 @@ input.submit {
 @media screen and (max-width: 690px) {
 
     *{
-        border: 1px solid red;
+        border: 0px solid red;
     }
     .main-header{
       flex-direction: column;
