@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-
+        scale=1.0" charset="UTF-8">
+        <title>verification</title>
+        <link rel="stylesheet" href="verification.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/7823c06798.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="heading">
+            <nav>
+                <h1>
+                    <a href="../index.html">IMAT TRIO</a>
+                </h1>
+                <div class="nav-list" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../IMAT/IMAT-Myan.html">IMAT</a>
+                        </li>
+                        <li>
+                            <a href="../Contact/contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="Registration.html">Registration</a>
+                        </li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="main">
+                <form action="verification.php" method="post">
+                    <label for="verification">Enter the verification Code Sent to You via Email :</label>
+                    <input type="number" class="number" name="verification_code" id="verification">
+                    <input type="submit" name="submit" value="submit">
+                </form>
+            </div>
+            
+        <section class="footer">
+                    <div class="credit">
+                        <h3>Designed by Thiha Kyaw Swar &copy;</h3>
+                    </div>
+                    <div class="Contact">
+                        <a href="https://www.facebook.com/synyster.kyawswar/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="tel:+393477186893"><i class="fa-solid fa-phone" target="_blank"></i></a>
+                        <a href="mailto:synyster.thiha@gmail.com"><i class="fa-solid fa-envelope" target="_blank"></i></a>
+                    </div>
+            </section>
+        </section>
+                <!-----JavaScript for Toggle Menu------>
+                <script>
+
+                    var navLinks = document.getElementById("navLinks");
+                    function showMenu() {
+                        navLinks.style.right = "0";
+                    }
+
+                    function hideMenu() {
+                        navLinks.style.right = "-200px";
+                    }
+                </script>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-
+        scale=1.0" charset="UTF-8">
+        <title>Registration</title>
+        <link rel="stylesheet" href="Registration.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/7823c06798.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="heading">
+            <nav>
+                <h1>
+                    <a href="../index.html">IMAT TRIO</a>
+                </h1>
+                <div class="nav-list" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../IMAT/IMAT-Myan.html">IMAT</a>
+                        </li>
+                        <li>
+                            <a href="../Contact/contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="">Registration</a>
+                        </li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="main">
+            <div class="main-body">
+                <form action="process-form.php" method="post">
+                    <div class="personal">
+                        <div class="individual">
+                            <label for="Name">Name :</label>
+                            <input type="text" name="name" id="Name" placeholder="Full Name">
+                        </div>
+                        <div class="individual">
+                            <label for="email">Email :</label>
+                            <input type="email" name="email" id="email" placeholder="MinMayLin@gmail.com">
+                        </div>
+                        <div class="individual">
+                            <label for="phone">Contact Number :</label>
+                            <input type="tel" name="phone" id="phone" placeholder="+39">
+                        </div>   
+                        <div class="individual">
+                            <label for="birthday">Date of Birth :</label>
+                            <input type="date" name="birthday" id="birthday">
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="ability">
+                    <div class="idk">
+                        <label>Are you attending foundation year in Italy?</label>
+                        <label><input type="radio" name="current_status" id="current_status" value="true">Yes</label>
+                        <label><input type="radio" name="current_status" id="current_status" value="false">No</label>
+
+                        <textarea name="university" placeholder="If you are attending foundation year, which university you currently enrolled at?"></textarea>
+                    </div>
+                    
+                    
+                    <div class="idk">
+                        <label>အရင်က IMAT နဲ့ပတ်သက်တဲ့စာတွေလုပ်ဖူးသလား / အခြေခံ medical knowledge ရှိပါသလား?</label>
+                        <select name="basic_knowledge">
+                            <option value="no">မလုပ်ဖူးပါ</option>
+                            <option value="few">အနည်းငယ်</option>
+                            <option value="normal">အတန်အသင့်</option>
+                    </select>
+                    </div>
+                    
+                    
+                    <div class="checkbox">
+                        <label>ဘယ်ဘာသာတွေ အားသာပါသလဲ?</label>
+                        <div class="gg">
+                            <label><input type="checkbox" name="biology" value="true">Biology</label>
+                            <label><input type="checkbox" name="chemistry" value="true">Chemistry</label>
+                            <label><input type="checkbox" name="physics" value="true">Physics</label>
+                            <label><input type="checkbox" name="maths" value="true">Maths</label>
+                            <label><input type="checkbox" name="logics" value="true">Logics</label>
+                        </div>
+                    </div>
+                    <input class="submit" type="submit" name="Register" value="Register">
+                </div>
+                </form>
+            </div>
+            </div>
+            <section class="footer">
+                    <div class="credit">
+                        <h3>Designed by Thiha Kyaw Swar &copy;</h3>
+                    </div>
+                    <div class="Contact">
+                        <a href="https://www.facebook.com/synyster.kyawswar/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="tel:+393477186893"><i class="fa-solid fa-phone" target="_blank"></i></a>
+                        <a href="mailto:synyster.thiha@gmail.com"><i class="fa-solid fa-envelope" target="_blank"></i></a>
+                    </div>
+            </section>
+        </section>
+                <!-----JavaScript for Toggle Menu------>
+                <script>
+
+                    var navLinks = document.getElementById("navLinks");
+                    function showMenu() {
+                        navLinks.style.right = "0";
+                    }
+
+                    function hideMenu() {
+                        navLinks.style.right = "-200px";
+                    }
+                </script>
+    </body>
+</html>

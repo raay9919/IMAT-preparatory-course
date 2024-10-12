@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0px solid rgb(34, 198, 176);
+    color: beige;
+}
+
+@keyframes submit{
+    0%{
+
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        transform: rotate(720deg);
+        transform: translateX(200px);
+    }
+}
+
+@keyframes spin{
+    0%{
+
+    }
+    50%{
+        scale: 2;
+        transform: rotate(0);
+    }
+    100%{
+
+        border-radius: 50%;
+        scale: 1.25;
+       }
+}
+
+@keyframes shadow{
+    0% {box-shadow: 0 3px 3px red;}
+    33% {box-shadow: -3px 0 3px blue;}
+    66% {box-shadow: 0px -3px 3px darkcyan;}
+    100% {box-shadow: 3px 0 3px yellowgreen;}
+}
+
+@keyframes logo{
+    0%{}
+    33%{ transform: rotate(0deg); scale: 1.3;}
+    66%{transform: rotate(360deg); scale: 1;}
+    100%{transform: rotate(360deg); scale: 1;}
+}
+
+@keyframes IMAT{
+    0%{transform: translateY(-400px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes Preparatory{
+    0%{transform: translateX(-400px);}
+    100%{transform: translateX(0px);}
+}
+
+@keyframes School{
+    0%{transform: translateY(400px);}
+    100%{transform: translateY(0px);}
+}
+
+/******heading******/
+.heading{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url(Background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    padding-bottom: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+nav h1{
+    border-radius: 15px;
+    padding: 6px 15px 6px 15px;
+    box-shadow: 0px 0px 4px rgb(4, 206, 186);
+    font-family: "Roboto Slab", serif;
+    backdrop-filter: blur(10px);
+    
+}
+nav h1 a{
+    text-decoration: none;
+}
+
+.nav-list{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+}
+
+.nav-list ul li a:hover{
+    text-shadow: 0 0 3PX #ab18ef, 0 0 5px #0000FF;
+    transition: 0.3s;
+    
+}
+
+nav .fa{
+    display: none;
+}
+
+
+
+
+.main-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 2%;
+    text-align: justify;
+    top: 30px;
+    position: relative;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 76vh;
+    
+}
+
+form {  
+    margin-top: 4%;
+    align-self: center;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-radius: 15px;
+    width: 50%;
+    padding: 5%;
+    box-shadow: 0px 0px 2px aqua;
+}
+
+#Head{
+    font-size: 20px;
+    margin: 0%;
+    font-weight: 600;
+}
+
+.footer {
+    
+    margin: 0%;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end
+}
+
+.credit{
+    font-family:cursive;
+    font-size: 10px;
+    text-shadow: 0px 0px 3px cyan;
+    margin: 0%;
+}
+.Contact{
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    margin-top: 1%;
+}
+
+.Contact a{
+    margin-left: 10%;
+}
+
+label{
+    margin: 2%;
+}
+
+input{
+    width: 100px;
+    margin: 2%;
+    height: 30px;
+    background-color: rgb(17, 151, 126);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.number{
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgba(58, 52, 52, 0.514);
+    padding-left: 2%;
+}
+
+input:hover{
+    box-shadow: 0px 0px 3px aqua;
+    cursor: pointer;
+    
+}
+@media(max-width: 800px){
+    .nav-list ul li{
+        display: block;
+    }
+    .nav-list{
+        position: fixed;
+        background: #030831fa;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-list ul{
+        padding: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .main{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content:center;
+    }
+    .main-header{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 95%;
+        top: 10%
+    }
+
+    .logo{
+        margin: 3%;
+    }
+    #IMAT{
+        text-align: right;
+    }
+    #Preparatory{
+        text-align: right;
+    }
+    #School{
+        text-align: right;
+    }
+    .main-body{
+        width: 100%;
+        border: 0px solid red;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .main-header{
+      flex-direction: column;
+    }
+    .main{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content:center;
+    }
+
+    .main-body{
+        width: 100%;
+    }
+
+    form{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label{
+        font-size: 10px;
+    }
+
+    textarea{
+        width: 100%;
+    }
+
+    .ability{
+        margin-top: 4%;
+    }
+
+    .number{
+        width: 200px;
+    }
+}
